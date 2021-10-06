@@ -1,13 +1,12 @@
 import Item from "./Item"
-import BudgetInput from "./BudgetInput"
 
-const Items = () => {
+const Items = ({ items }) => {
   return (
-    <div className="row main">
-      <BudgetInput />
+    <div className="row">
       <div className="row content">
-        <Item />
-        <a href="#">Test</a>
+        {items.map((item, index) => (
+          <Item key={index} item={item} />
+        ))}
       </div>
     </div>
   )

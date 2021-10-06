@@ -1,11 +1,12 @@
 import React from "react"
 
-const Item = () => {
+const Item = ({ item }) => {
   return (
     <div className="item">
-      <span>Test type</span>
-      <span>Test Name</span>
-      <span>Test Price</span>
+      <span>{item.type}</span>
+      <span>{item.name}</span>
+      <span>{item.highPrice}</span>
+      <span>{item.lowPrice}</span>
     </div>
   )
 }
